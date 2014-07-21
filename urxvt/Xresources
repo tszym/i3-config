@@ -1,0 +1,43 @@
+! Xresources file
+
+URxvt.transparent: false
+! URxvt*.shading: 0 to 99 darkens, 101 to 200 lightens
+!URxvt.shading:10 
+!URxvt*.depth: 32
+
+! scrollbar style - rxvt (default), plain (most compact), next, or xterm
+URxvt.scrollbar: true
+URxvt.scrollBar_right: true
+URxvt.scrollstyle: plain
+
+! font
+!URxvt.font: 9x15
+urxvt.font:             xft:Inconsolata:size=13:antialias=true
+
+URxvt.perl-ext-common:  default,tabbedex,url-select
+
+! tabs
+URxvt.tabbed.autohide: true
+URxvt.tabbed.title: false
+URxvt.tabbed.tabbar-fg: 2
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg:    3
+URxvt.tabbed.tab-bg:    0
+
+! urls
+URxvt.keysym.M-u:    perl:url-select:select_next
+URxvt.url-select.launcher:   /usr/bin/firefox
+URxvt.url-select.underline: true
+
+URxvt.urgentOnBell:       true
+
+
+! Color scheme
+!#include ".config/colors/colors/dc2"
+#include "hybrid"
+
+!URxvt.foreground:  #999999
+!URxvt.background:  #020202
+!URxvt.foreground: white
+!URxvt.background: black
+!URxvt.background: [10]black
