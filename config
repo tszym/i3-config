@@ -156,3 +156,4 @@ bar {
 }
 
 exec_always xrdb -merge ~/.i3/urxvt/Xresources
+exec_always unclutter &

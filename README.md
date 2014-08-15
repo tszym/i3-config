@@ -13,6 +13,11 @@ For specific hardware or particular cases, please see [the Arch Wiki page](https
 
 You should clone this repo at `~/.i3`.
 
+## Additional parts
+
+This config uses `unclutter` to hide the X mouse cursor when not needed.
+Use `pacman -S unclutter` or remove this command in the `config` file.
+
 # Terminal
 
 You can get a sweet terminal with [rxtv unicode](https://wiki.archlinux.org/index.php/Urxvt).
