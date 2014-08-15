@@ -23,6 +23,10 @@ Just install it: `pacman -S rxvt-unicode`
 
 `$ xrdb -merge ~/.i3/urxvt/Xresources`
 
+The config file does it for you!
+
+`exec_always xrdb -merge ~/.i3/urxvt/Xresources`
+
 # Troubleshooting
 
 ## i3 does not appears in the wm list of KDM
