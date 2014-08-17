@@ -18,6 +18,9 @@ You should clone this repo at `~/.i3`.
 This config uses `unclutter` to hide the X mouse cursor when not needed.
 Use `pacman -S unclutter` or remove this command in the `config` file.
 
+It also uses [Conky](https://wiki.archlinux.org/index.php/Conky) as the status bar.
+Use `pacman -S conky` to install.
+
 # Terminal
 
 You can get a sweet terminal with [rxtv unicode](https://wiki.archlinux.org/index.php/Urxvt).

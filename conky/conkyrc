@@ -1,0 +1,81 @@
+alignment top_left
+background no
+border_width 1
+# Number of CPU samples to average
+cpu_avg_samples 3
+default_color white
+default_outline_color white
+default_shade_color white
+double_buffer no
+draw_borders no
+draw_graph_borders yes
+draw_outline no
+draw_shades no
+use_xft yes
+xftfont DejaVu Sans Mono:size=12
+gap_x 5
+gap_y 60
+minimum_size 5 5
+net_avg_samples 2
+no_buffers yes
+out_to_x no
+out_to_console yes
+out_to_stderr no
+extra_newline no
+override_utf8_locale yes
+own_window no
+own_window_class Conky
+own_window_type desktop
+# Shortens units to signle character (GiB -> G). Default is off
+short_units yes
+stippled_borders 0
+update_interval 2.0
+uppercase no
+use_spacer left
+show_graph_scale no
+show_graph_range no
+
+# Make conky run forever
+total_run_times 0
+
+# Tells an interface is up when up and having link and an assigned IP address
+if_up_strictness address
+
+max_text_width 0
+
+#TEXT
+#${scroll 16 $nodename - $sysname $kernel on $machine | }
+#$hr
+#${color grey}Uptime:$color $uptime
+#${color grey}Frequency (in MHz):$color $freq
+#${color grey}Frequency (in GHz):$color $freq_g
+#${color grey}RAM Usage:$color $mem/$memmax - $memperc% ${membar 4}
+#${color grey}Swap Usage:$color $swap/$swapmax - $swapperc% ${swapbar 4}
+#${color grey}CPU Usage:$color $cpu% ${cpubar 4}
+#${color grey}Processes:$color $processes  ${color grey}Running:$color $running_processes
+#$hr
+#${color grey}File systems:
+# / $color${fs_used /}/${fs_size /} ${fs_bar 6 /}
+#${color grey}Networking:
+#Up:$color ${upspeed eth0} ${color grey} - Down:$color ${downspeed eth0}
+#$hr
+#${color grey}Name              PID   CPU%   MEM%
+#${color lightgrey} ${top name 1} ${top pid 1} ${top cpu 1} ${top mem 1}
+#${color lightgrey} ${top name 2} ${top pid 2} ${top cpu 2} ${top mem 2}
+#${color lightgrey} ${top name 3} ${top pid 3} ${top cpu 3} ${top mem 3}
+#${color lightgrey} ${top name 4} ${top pid 4} ${top cpu 4} ${top mem 4}
+
+# {"full_text":"Battery ${battery_percent BAT0}% (${battery_time})", "color":
+#  ${if_match ${battery_percent BAT0}>18}${if_match ${battery_percent BAT0}>=95}"\#00ff00"${else}"\#ffffff"${endif}${else}"\#ff0000"${endif} },
+
+TEXT
+
+[{"full_text":"Home ${fs_free /home} Free", "color": "\#ffffff" },
+ {"full_text":"${if_up enp0s25}enp0s25 ${addr enp0s25} ${endif}", "color": "\#ffffff" },
+ {"full_text":"CPU ${cpu}% ${freq_g}GHz +${acpitemp}°C", "color":
+  ${if_match ${acpitemp}<80}"\#ffffff"${else}"\#ff0000"${endif} },
+ {"full_text":"RAM ${memperc}%", "color":
+  ${if_match ${memperc}<90}"\#ffffff"${else}"\#ff0000"${endif} },
+ {"full_text":"${time %a %d %b} ${time %H:%M:%S}", "color": "\#ffffff"}
+
+],
