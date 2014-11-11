@@ -157,3 +157,4 @@ bar {
 
 exec_always xrdb -merge ~/.i3/urxvt/Xresources
 exec_always unclutter &
+exec_always xmodmap ~/.i3/speedswapper

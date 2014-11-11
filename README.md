@@ -35,6 +35,16 @@ The config file does it for you!
 
 `exec_always xrdb -merge ~/.i3/urxvt/Xresources`
 
+# Keyboard controls
+
+This config swaps the CapsLock and Escape keys.
+For this to work you need the `xmodmap` command to be avaliable.
+You can install it with `pacman -S xorg-xmodmap`.
+
+To disable this, just comment or remove the line in `config`:
+
+`exec_always xmodmap ~/.i3/speedswapper`
+
 # Troubleshooting
 
 ## i3 does not appears in the wm list of KDM
