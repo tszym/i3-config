@@ -7,25 +7,30 @@ It is always a good idea to customize the bindings to your convenience, speciall
 
 # Installation
 
-On [Arch](https://www.archlinux.org), use `pacman -S i3 dmenu` to install the i3 group of packages and *dmenu* that will be the application launcher.
+On [Arch](https://www.archlinux.org), use `# pacman -S i3 dmenu` to install the i3 group of packages and *dmenu* that will be the application launcher.
 
 For specific hardware or particular cases, please see [the Arch Wiki page](https://wiki.archlinux.org/index.php/I3).
+
+For Debian, you can do the same with `# apt-get install i3`.
 
 You should clone this repo at `~/.i3`.
 
 ## Additional parts
 
 This config uses `unclutter` to hide the X mouse cursor when not needed.
-Use `pacman -S unclutter` or remove this command in the `config` file.
+Use `# pacman -S unclutter` or remove this command in the `config` file.
 
 It also uses [Conky](https://wiki.archlinux.org/index.php/Conky) as the status bar.
-Use `pacman -S conky` to install.
+Use `# pacman -S conky` to install or `# apt-get install conky` if using Debian.
 
 # Terminal
 
 You can get a sweet terminal with [rxtv unicode](https://wiki.archlinux.org/index.php/Urxvt).
 
-Just install it: `pacman -S rxvt-unicode`
+Just install it: `# pacman -S rxvt-unicode` or with Debian: `# apt-get install rxvt-unicode-256color`.
+
+You will also need to daemonize it. [The Arch wiki page](https://wiki.archlinux.org/index.php/Urxvt) shows how to do it.
+If you are using a distro without systemd, you should find a way to daemonize it or change the terminal control to `urxvtcd`.
 
 **Note:** you will need to run the following command each time you log in, in order to get the terminal's theme loaded:
 
@@ -39,7 +44,7 @@ The config file does it for you!
 
 This config swaps the CapsLock and Escape keys.
 For this to work you need the `xmodmap` command to be avaliable.
-You can install it with `pacman -S xorg-xmodmap`.
+You can install it with `# pacman -S xorg-xmodmap`.
 
 To disable this, just comment or remove the line in `config`:
 
