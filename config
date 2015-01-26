@@ -139,6 +139,12 @@ mode "$mode_system" {
 
 bindsym $mod+Pause mode "$mode_system"
 
+# special keys (may differ between keyboards)
+bindsym XF86Sleep exec --no-startup-id $Locker && systemctl suspend, mode "default"
+bindsym XF86AudioMute exec --no-startup-id ponymix toggle
+bindsym XF86AudioLowerVolume exec --no-startup-id ponymix decrease 3
+bindsym XF86AudioRaiseVolume exec --no-startup-id ponymix increase 3
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
