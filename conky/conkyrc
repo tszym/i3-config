@@ -50,12 +50,14 @@ conky.text = [[
 
 [{"full_text":"Root${fs_free /} Free", "color": "\#ffffff" },
  {"full_text":"Home${fs_free /home} Free", "color": "\#ffffff" },
- {"full_text":"${if_up enp0s25}enp0s25 ${addr enp0s25} ${endif}", "color": "\#ffffff" },
+ {"full_text":"${if_up enp3s0}enp3s0 ${addr enp3s0} ${endif}", "color": "\#ffffff" },
  {"full_text":"${if_up wlp2s0}wlp2s0 ${addr wlp2s0} ${endif}", "color": "\#ffffff" },
  {"full_text":"CPU ${cpu cpu0}% ${freq_g}GHz +${hwmon temp 1}°C", "color":
   ${if_match ${hwmon temp 1}<87}"\#ffffff"${else}"\#ff0000"${endif} },
  {"full_text":"RAM ${memperc}%", "color":
   ${if_match ${memperc}<90}"\#ffffff"${else}"\#ff0000"${endif} },
+ {"full_text":"Battery ${battery_percent BAT0}% (${battery_time})", "color":
+  ${if_match ${battery_percent BAT0}>18}${if_match ${battery_percent BAT0}>=94}"\#00ff00"${else}"\#ffffff"${endif}${else}"\#ff0000"${endif} },
  {"full_text":"${time %a %d %b} ${time %H:%M:%S}", "color": "\#ffffff"}
 
 ],
