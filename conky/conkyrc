@@ -45,10 +45,12 @@ max_text_width 0
 
 TEXT
 
-[{"full_text":"Home ${fs_free /home} Free", "color": "\#ffffff" },
+[{"full_text":"Root${fs_free /} Free", "color": "\#ffffff" },
+ {"full_text":"Home${fs_free /home} Free", "color": "\#ffffff" },
  {"full_text":"${if_up enp0s25}enp0s25 ${addr enp0s25} ${endif}", "color": "\#ffffff" },
- {"full_text":"CPU ${cpu}% ${freq_g}GHz +${acpitemp}°C", "color":
-  ${if_match ${acpitemp}<80}"\#ffffff"${else}"\#ff0000"${endif} },
+ {"full_text":"${if_up wlp2s0}wlp2s0 ${addr wlp2s0} ${endif}", "color": "\#ffffff" },
+ {"full_text":"CPU ${cpu cpu0}% ${freq_g}GHz +${hwmon temp 1}°C", "color":
+  ${if_match ${hwmon temp 1}<87}"\#ffffff"${else}"\#ff0000"${endif} },
  {"full_text":"RAM ${memperc}%", "color":
   ${if_match ${memperc}<90}"\#ffffff"${else}"\#ff0000"${endif} },
  {"full_text":"${time %a %d %b} ${time %H:%M:%S}", "color": "\#ffffff"}
