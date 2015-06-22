@@ -23,6 +23,8 @@ Use `# pacman -S unclutter` or remove this command in the `config` file.
 It also uses [Conky](https://wiki.archlinux.org/index.php/Conky) as the status bar.
 Use `# pacman -S conky` to install or `# apt-get install conky` if using Debian.
 
+This config uses *ACPI* to get temperature & battery (if laptop) informations. `# pacman -S acpi`
+
 # Terminal
 
 You can get a sweet terminal with [rxtv unicode](https://wiki.archlinux.org/index.php/Urxvt).
