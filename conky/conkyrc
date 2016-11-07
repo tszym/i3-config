@@ -1,49 +1,52 @@
-alignment top_left
-background no
-border_width 1
-# Number of CPU samples to average
-cpu_avg_samples 3
-default_color white
-default_outline_color white
-default_shade_color white
-double_buffer no
-draw_borders no
-draw_graph_borders yes
-draw_outline no
-draw_shades no
-use_xft yes
-xftfont DejaVu Sans Mono:size=12
-gap_x 5
-gap_y 60
-minimum_size 5 5
-net_avg_samples 2
-no_buffers yes
-out_to_x no
-out_to_console yes
-out_to_stderr no
-extra_newline no
-override_utf8_locale yes
-own_window no
-own_window_class Conky
-own_window_type desktop
-# Shortens units to signle character (GiB -> G). Default is off
-short_units yes
-stippled_borders 0
-update_interval 2.0
-uppercase no
-use_spacer left
-show_graph_scale no
-show_graph_range no
+conky.config = {
+  alignment = 'top_left',
+  background = false,
+  border_width = 1,
+  -- Number of CPU samples to average
+  cpu_avg_samples = 3,
+  default_color = 'white',
+  default_outline_color = 'white',
+  default_shade_color = 'white',
+  double_buffer = false,
+  draw_borders = false,
+  draw_graph_borders = true,
+  draw_outline = false,
+  draw_shades = false,
+  use_xft = true,
+  xftfont = 'DejaVu Sans Mono:size=12',
+  gap_x = 5,
+  gap_y = 60,
+  minimum_height = 5,
+  minimum_width = 5,
+  net_avg_samples = 2,
+  no_buffers = true,
+  out_to_x = false,
+  out_to_console = true,
+  out_to_stderr = false,
+  extra_newline = false,
+  override_utf8_locale = true,
+  own_window = false,
+  own_window_class = 'Conky',
+  own_window_type = 'desktop',
+  -- Shortens units to signle character (GiB -> G). Default is off
+  short_units = true,
+  stippled_borders = 0,
+  update_interval = 2.0,
+  uppercase = false,
+  use_spacer = 'left',
+  show_graph_scale = false,
+  show_graph_range = false,
 
-# Make conky run forever
-total_run_times 0
+  -- Make conky run forever
+  total_run_times = 0,
 
-# Tells an interface is up when up and having link and an assigned IP address
-if_up_strictness address
+  -- Tells an interface is up when up and having link and an assigned IP address
+  if_up_strictness = 'address',
 
-max_text_width 0
+  max_text_width = 0
+}
 
-TEXT
+conky.text = [[
 
 [{"full_text":"Root${fs_free /} Free", "color": "\#ffffff" },
  {"full_text":"Home${fs_free /home} Free", "color": "\#ffffff" },
@@ -56,3 +59,4 @@ TEXT
  {"full_text":"${time %a %d %b} ${time %H:%M:%S}", "color": "\#ffffff"}
 
 ],
+]]
