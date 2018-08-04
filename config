@@ -147,8 +147,8 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id ponymix increase 3
 
 # for laptops
 bindsym XF86TouchpadToggle exec --no-startup-id ~/.i3/toggletouchpad.sh
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 3 #decrease screen brightness
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 3 #increase screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 7 #decrease screen brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 7 #increase screen brightness
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
