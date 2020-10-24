@@ -27,6 +27,8 @@ This config uses *ACPI* to get temperature & battery (if laptop) informations. `
 
 # Terminal
 
+Configuration is provided for [Alacritty](https://wiki.archlinux.org/index.php/Alacritty). You can switch to Urxvt with instructions below and replace de binding in the i3 config file.
+
 You can get a sweet terminal with [rxtv unicode](https://wiki.archlinux.org/index.php/Urxvt).
 
 Just install it: `# pacman -S rxvt-unicode` or with Debian: `# apt-get install rxvt-unicode-256color`.
