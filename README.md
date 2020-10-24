@@ -13,7 +13,7 @@ For specific hardware or particular cases, please see [the Arch Wiki page](https
 
 For Debian, you can do the same with `# apt-get install i3`.
 
-You should clone this repo at `~/.i3`.
+You should clone this repo at `~/.config/i3`.
 
 ## Additional parts
 
@@ -38,11 +38,11 @@ If you are using a distro without systemd, you should find a way to daemonize it
 
 **Note:** you will need to run the following command each time you log in, in order to get the terminal's theme loaded:
 
-`$ xrdb -merge ~/.i3/urxvt/Xresources`
+`$ xrdb -merge ~/.config/i3/urxvt/Xresources`
 
 The config file does it for you!
 
-`exec_always xrdb -merge ~/.i3/urxvt/Xresources`
+`exec_always xrdb -merge ~/.config/i3/urxvt/Xresources`
 
 # Keyboard controls
 
@@ -52,7 +52,7 @@ You can install it with `# pacman -S xorg-xmodmap`.
 
 To disable this, just comment or remove the line in `config`:
 
-`exec_always xmodmap ~/.i3/speedswapper`
+`exec_always xmodmap ~/.config/i3/speedswapper`
 
 # Troubleshooting
 
