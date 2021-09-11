@@ -28,7 +28,7 @@ font pango:Inconsolata 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvtc
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -146,7 +146,7 @@ bindsym XF86AudioLowerVolume exec --no-startup-id ponymix decrease 3
 bindsym XF86AudioRaiseVolume exec --no-startup-id ponymix increase 3
 
 # for laptops
-bindsym XF86TouchpadToggle exec --no-startup-id ~/.i3/toggletouchpad.sh
+bindsym XF86TouchpadToggle exec --no-startup-id ~/.config/i3/toggletouchpad.sh
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 7 #decrease screen brightness
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 7 #increase screen brightness
 
@@ -179,11 +179,11 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command $HOME/.i3/conky/wrapper.sh
+        status_command $HOME/.config/i3/conky/wrapper.sh
         tray_output primary
 
 }
 
-exec_always xrdb -merge ~/.i3/urxvt/Xresources
+exec_always xrdb -merge ~/.config/i3/urxvt/Xresources
 exec_always unclutter &
-exec_always xmodmap ~/.i3/speedswapper
+exec_always xmodmap ~/.config/i3/speedswapper
