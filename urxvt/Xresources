@@ -23,7 +23,7 @@ URxvt.secondaryScroll: 0
 
 ! font
 !URxvt.font: 9x15
-urxvt.font:             xft:Inconsolata:size=13:antialias=true
+urxvt.font:             xft:Inconsolata:size=11:antialias=true
 
 !URxvt.perl-ext-common:  default,tabbedex,url-select
 URxvt.perl-ext-common:  default,url-select

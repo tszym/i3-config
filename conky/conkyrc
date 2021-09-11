@@ -50,7 +50,7 @@ conky.text = [[
 [{"full_text":"Root${fs_free /} Free", "color": ${if_match ${fs_free_perc /}<15}"\#ff0000"${else}"\#ffffff"${endif}},
  {"full_text":"Home${fs_free /home} Free", "color": ${if_match ${fs_free_perc /home}<2}"\#ff0000"${else}"\#ffffff"${endif}},
  {"full_text":"${if_up enp4s0}enp4s0 ${addr enp4s0} ${endif}", "color": "\#ffffff" },
- {"full_text":"${if_up enp0s25}enp0s25 ${addr enp0s25} ${endif}", "color": "\#ffffff" },
+ {"full_text":"${if_up enp3s0}enp3s0 ${addr enp3s0} ${endif}", "color": "\#ffffff" },
  {"full_text":"${if_up wlp2s0}wlp2s0 ${addr wlp2s0} ${endif}", "color": "\#ffffff" },
  {"full_text":"${if_up wlp0s20f3}wlp0s20f3 ${addr wlp0s20f3} ${endif}", "color": "\#ffffff" },
  {"full_text":"CPU ${cpu cpu0}% ${freq_g}GHz +${acpitemp}°C", "color":
@@ -59,6 +59,8 @@ conky.text = [[
   ${if_match ${memperc}<90}"\#ffffff"${else}"\#ff0000"${endif} },
  {"full_text":"Swap ${swapperc}%", "color":
   ${if_match ${swapperc}<90}"\#ffffff"${else}"\#ff0000"${endif} },
+ {"full_text":"Battery ${battery_percent BAT0}% (${battery_time})", "color":
+  ${if_match ${battery_percent BAT0}>18}${if_match ${battery_percent BAT0}>=94}"\#00ff00"${else}"\#ffffff"${endif}${else}"\#ff0000"${endif} },
  {"full_text":"${time %a %d %b} ${time %H:%M:%S}", "color": "\#ffffff"}
 
 ],
